@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+.desktop {
+  box-sizing: border-box;
+  width: min-content; /* 1200px */
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 24px 24px 24px;
+  background-color: #111111;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 24;
+  position: absolute;
+  border-radius: 0px 0px 0px 0px;
+}
