@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,83 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+.home {
+  background-color: #284b63;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.home .div-2 {
+  background-color: #284b63;
+  border: 1px none;
+  height: 2205px;
+  overflow: hidden;
+  position: relative;
+  width: 1512px;
+}
+
+.home .component-1 {
+  left: 0 !important;
+  position: absolute !important;
+  top: 1980px !important;
+}
+
+.home .group {
+  background-color: #998da0;
+  height: 982px;
+  left: 0;
+  position: absolute;
+  top: 998px;
+  width: 1512px;
+}
+
+.home .carousel-instance {
+  left: 546px !important;
+  top: 198px !important;
+}
+
+.home .overlap-group-wrapper {
+  height: 982px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1514px;
+}
+
+.home .overlap-group-2 {
+  background-color: #284b63;
+  height: 982px;
+  position: relative;
+  width: 1512px;
+}
+
+.home .text-wrapper {
+  color: #c4e7d4;
+  font-family: "Jura-Regular", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  left: 161px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 357px;
+  width: 444px;
+}
+
+.home .https-app {
+  height: 597px;
+  left: 764px;
+  position: absolute;
+  top: 226px;
+  width: 597px;
+}
+
+.home .rectangle-1 {
+  left: 0 !important;
+  position: fixed !important;
+  top: 0 !important;
 }

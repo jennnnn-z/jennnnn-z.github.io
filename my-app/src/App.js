@@ -1,27 +1,22 @@
-// import logo from './logo.svg';
+import React from "react";
 import './App.css';
-// import homebutton from './components/homebutton'
-import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route }
-    from 'react-router-dom';
-import Home from './pages';
-import About from './pages/about';
-import Contact from './pages/contact';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Header from './components/header'
+import Footer from "./components/footer";
+import MainContent from "./components/maincontent";
 
 function App() {
   return (
-    <div className="App">
-       <Router>
-            <Navbar />
-            <homebutton />
-            <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
-        </Router>
+    <div> 
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' component={Header} />
+          <Route path="/maincontent" component={MainContent} />
+          <Route path="/footer" component={Footer} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;
