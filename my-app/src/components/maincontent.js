@@ -24,10 +24,10 @@ class MainContent extends Component{
             </maincontent>
         )  
     }
-         
-}
+};
+
 MainContent.propTypes = {
     pageTitle: PropTypes.string
-}
+};
 
-export default MainContent
+export default MainContent;
