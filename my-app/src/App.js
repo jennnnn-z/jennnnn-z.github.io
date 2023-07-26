@@ -18,11 +18,11 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-          <Route component={NotFound} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

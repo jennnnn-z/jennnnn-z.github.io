@@ -1,10 +1,49 @@
 import React from 'react';
+import styled from 'styled-components';
  
+const Hero = styled.div`
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    height: min-content; /* 776px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px 100px 100px;
+    background-color: var(--dark_blue, #153243);
+    min-height: calc(calc(var(--framer-viewport-height, 100vh) * 1) * 1);
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    border-radius: 0px 0px 0px 0px;
+`;
+
+const Name = styled.text`
+flex-shrink: 0;
+width: 1000px;
+height: auto; /* 97px */
+white-space: pre;
+position: relative;
+font-weight: 700;
+font-style: normal;
+font-family: "Unbounded", sans-serif;
+color: var(--lighter_blue, #284b63);
+font-size: 99.45449836420218px;
+letter-spacing: 0em;
+text-transform: uppercase;
+line-height: 1.1;
+text-align: center;
+`
+
 const Home = () => {
     return (
-        <div>
-            <h1>Welcome to GeeksforGeeks</h1>
-        </div>
+        <Hero>
+            <Name>Jennifer Zhang</Name>
+        </Hero>
     );
 };
  
