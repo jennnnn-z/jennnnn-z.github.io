@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Lottie from "lottie-react";
+import { DotLottiePlayer } from '@dotlottie/react-player';
  
 const Hero = styled.div`
     box-sizing: border-box;
@@ -12,7 +14,7 @@ const Hero = styled.div`
     align-items: center;
     padding: 0px 100px 100px 100px;
     background-color: var(--dark_blue, #153243);
-    min-height: calc(calc(var(--framer-viewport-height, 100vh) * 1) * 1);
+    min-height: 100vh;
     overflow: hidden;
     z-index: 1;
     position: relative;
@@ -43,6 +45,14 @@ const Home = () => {
     return (
         <Hero>
             <Name>Jennifer Zhang</Name>
+            <div>
+                <DotLottiePlayer
+                    src="https://lottie.host/1d2ac87f-fa4a-4fd9-89b0-624da7c26017/7gDd1MBonF.lottie"
+                    autoplay
+                    loop
+                >
+                </DotLottiePlayer>
+            </div>
         </Hero>
     );
 };
