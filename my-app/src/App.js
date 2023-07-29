@@ -14,6 +14,7 @@ import GlobalStyles from './globalstyles';
 const App = () => {
   return (
     <>
+      <script src="http://localhost:8097"></script>
       <GlobalStyles />
       <BrowserRouter>
         <Header />

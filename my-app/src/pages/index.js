@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Lottie from "lottie-react";
 import { DotLottiePlayer } from '@dotlottie/react-player';
- 
+
 const Hero = styled.div`
     box-sizing: border-box;
     flex-shrink: 0;
     width: 100%;
-    height: min-content; /* 776px */
+    height: 100vh; /* 776px */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +23,7 @@ const Hero = styled.div`
     border-radius: 0px 0px 0px 0px;
 `;
 
-const Name = styled.text`
+const Name = styled.h1`
 flex-shrink: 0;
 width: 1000px;
 height: auto; /* 97px */
@@ -43,18 +42,27 @@ text-align: center;
 
 const Home = () => {
     return (
-        <Hero>
-            <Name>Jennifer Zhang</Name>
-            <div>
-                <DotLottiePlayer
-                    src="https://lottie.host/1d2ac87f-fa4a-4fd9-89b0-624da7c26017/7gDd1MBonF.lottie"
-                    autoplay
-                    loop
-                >
-                </DotLottiePlayer>
-            </div>
-        </Hero>
+      <Hero>
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%) rotate(90deg)",
+            width: "100vh", // Using vh to match the viewport height
+            height: "100vw", // Using vw to match the viewport width
+          }}
+        >
+          <DotLottiePlayer
+            src="https://lottie.host/1d2ac87f-fa4a-4fd9-89b0-624da7c26017/7gDd1MBonF.lottie"
+            autoplay
+            loop
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+        <Name style={{ position: "relative", zIndex: 1 }}>Jennifer Zhang</Name>
+      </Hero>
     );
 };
- 
+
 export default Home;

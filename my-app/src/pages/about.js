@@ -5,8 +5,7 @@ const About = () => {
     return (
         <div>
             <h1>
-                GeeksforGeeks is a Computer
-                Science portal for geeks.
+                good soup
             </h1>
         </div>
     );
