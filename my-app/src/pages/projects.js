@@ -2,17 +2,17 @@ import React, { useEffect, useState }  from "react";
 import '../styles.scss';
 
 const Projects = () => {
-  useEffect(() => {
-    // Add inline styles to the body element when the component mounts
-    document.body.style.backgroundColor = "lightblue";
-    document.body.style.color = "white";
+  // useEffect(() => {
+  //   // Add inline styles to the body element when the component mounts
+  //   document.body.style.backgroundColor = "lightblue";
+  //   document.body.style.color = "white";
 
-    // Clean up by removing the inline styles when the component unmounts
-    return () => {
-      document.body.style.backgroundColor = "";
-      document.body.style.color = "";
-    };
-  }, []);
+  //   // Clean up by removing the inline styles when the component unmounts
+  //   return () => {
+  //     document.body.style.backgroundColor = "";
+  //     document.body.style.color = "";
+  //   };
+  // }, []);
   
   const [filter, setFilter] = useState("all");
 
