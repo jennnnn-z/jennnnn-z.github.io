@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import '../styles.scss';
+import {projects} from './projectsArray'
 
 const Projects = () => {
   // useEffect(() => {
@@ -20,44 +21,11 @@ const Projects = () => {
     setFilter(category);
   };
 
-  const projects = [
-    {
-      title: "Pittsburghers for Public Transit Website Improvement",
-      category: "uiux",
-      active: true,
-      description: "Worked with a team of 2 to improve the Pittsburghers for Public Transit website, including increased calls to action, event list integration, and improved accessibility. ",
-    }, 
-    {
-      title: "Mitigating Toxic Behaviors Instagram Feature",
-      category: "uiux",
-      active: true,
-      description: "Worked with a team of 6 to create a few features to limit trolling and spam. Involved user research, wireframing, and prototyping",
-    },
-    {
-      title: "Activity Generator",
-      category: "code",
-      active: true,
-      description: "Created a full stack application using a RESTful API...",
-      imageUrl: "../img/project.jpg",
-    },
-    {
-      title: "Great Pittsburgh Baking Outlet",
-      category: "code",
-      active: true,
-      description: "Created a mock e-commerce application using Ruby on Rails...",
-    },
-    {
-      title: "Cross Country Connections",
-      category: "physical",
-      active: true,
-      description: "",
-    }
-  ];
 
   const filteredProjects =
     filter === "all"
       ? projects
-      : projects.filter((project) => project.category === filter);
+      : projects.filter((project) => project.category.includes(filter));
 
   return (
     <section id="projects">
