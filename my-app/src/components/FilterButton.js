@@ -3,6 +3,7 @@ const FilterButton = ({ category, filterSelection, currentFilter }) => (
     className={`cta-btn cta-btn--hero hero-cta ${currentFilter === category ? 'active' : ''}`}
     type="button"
     onClick={() => filterSelection(category)}
+    style={{ color: 'black' }}
   >
     {category}
   </button>

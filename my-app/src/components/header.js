@@ -15,7 +15,7 @@ const Navbar = styled.div`
 
 
 const NavLink = styled(Link)`
-  color: #888888;
+  color: #AAAAAA;
   text-decoration: none;
   font-weight: 700;
   position: relative;

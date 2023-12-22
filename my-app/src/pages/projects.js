@@ -26,10 +26,15 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" style={{ backgroundColor: "lightslategray" }}>
+    <section
+      id="projects"
+      style={{ backgroundColor: "#1d4c64", color: "white" }}
+    >
       <div className="container">
         <div className="project-wrapper">
-          <h2 className="section-title dark-blue-text">Projects</h2>
+          <h2 className="section-title" style={{ color: "#408abf" }}>
+            Projects
+          </h2>
           <div
             id="btn-container"
             className="hero-cta load-hidden"

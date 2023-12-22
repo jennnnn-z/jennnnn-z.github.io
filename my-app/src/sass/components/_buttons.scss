@@ -46,7 +46,7 @@
   @include supportIE11() {
     color: $secondary-color !important;
     &:hover {
-      color: $white-color !important;
+      color: $dark-blue-text !important;
     }
   }
 
@@ -69,7 +69,7 @@
   }
 
   &:hover {
-    -webkit-text-fill-color: $white-color;
+    -webkit-text-fill-color: $dark-blue-text;
     text-decoration: none;
 
     @include respond(phone) {
@@ -82,7 +82,7 @@
   }
   
   &.active { /* Added selector for active state */
-    -webkit-text-fill-color: $white-color;
+    -webkit-text-fill-color: $dark-blue-text;
     text-decoration: none;
 
     @include respond(phone) {

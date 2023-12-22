@@ -1,5 +1,5 @@
 import Project from "./Project";
-import { projects } from "../pages/projectsArray";
+import { projects } from "../data/projectsArray";
 
 const ProjectList = ({ filter }) => {
   const filteredProjects =
