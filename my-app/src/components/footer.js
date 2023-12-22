@@ -1,5 +1,8 @@
 import React from "react";
 import styled from 'styled-components'; 
+import { FiLinkedin, FiMail, FiGithub } from "react-icons/fi";
+
+
 
 const FooterContainer = styled.footer`
   color: white;
@@ -20,10 +23,47 @@ const FooterContainer = styled.footer`
   border-radius: 0px 0px 0px 0px;
 `;
 
+const SocialIcon = styled.a`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  font-size: 20px;
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+`;
+
 const Footer = () => {
   return (
     <FooterContainer>
       <p>&copy; {new Date().getFullYear()} Jennifer Zhang</p>
+      <SocialIcons>
+      <SocialIcon
+          href="https://www.linkedin.com/jenniferzhang02/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiLinkedin />
+      </SocialIcon>
+      <SocialIcon
+        href="https://github.com/in/jenniferzhang02"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FiGithub />
+      </SocialIcon>
+      <SocialIcon
+        href="mailto:jenzhang02@protonmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FiMail />
+        </SocialIcon>
+      </SocialIcons>
     </FooterContainer>
   );
 };

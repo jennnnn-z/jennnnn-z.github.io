@@ -4,7 +4,7 @@ export const projects = [
     category: "code",
     active: true,
     description:
-      "Worked with a team of 2 to create an iOS app in Swift to save, organize, and cook recipes. I wrote most of the overall front end screens. I also worked as the project manager to ensure our team's success. ",
+      "Worked with a team of 2 to create an iOS app in Swift to save, organize, and cook recipes. I coded some of the front end screens. I also worked as the project manager to keep our team organized. ",
     sourceCodeUrl: "https://github.com/jgao08/FlavorSaver",
   },
   {
@@ -26,7 +26,6 @@ export const projects = [
     category: "code",
     active: true,
     description: "Created a full stack application using a RESTful API...",
-    imageUrl: "../images/project.jpg",
   },
   {
     title: "Great Pittsburgh Baking Outlet",
@@ -36,7 +35,7 @@ export const projects = [
   },
   {
     title: "Cross Country Connections",
-    category: "physical",
+    category: "other",
     active: true,
     description:
       "Research project involving two physical boards with LED strips and an array of buttons connected via Arduino and the internet. ",
@@ -45,7 +44,7 @@ export const projects = [
     title: "Clawcade",
     // cateogories are physical and code
     category: ["physical", "code"],
-    active: true,
+    active: false,
     description:
       "Digital claw machine with physical buttons with Arduino. Two participants are aiming to retrieve a prize, but the stuffed bears are attempting to stop the snatching. ",
   },

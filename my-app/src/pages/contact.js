@@ -1,4 +1,28 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Input = styled.input`
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+`;
+
+const TextArea = styled.textarea`
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+`;
+
+const Button = styled.button`
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,44 +61,30 @@ const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
 
 
   return (
-    <div style={{margin: "10px"}}>
-      <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          style={{ width: "50%", margin: "5px" }}
-          placeholder="Name"
+    <div>
+      <Form onSubmit={handleSubmit}>
+        <Input
           type="text"
-          id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          required
+          placeholder="Your Name"
         />
-        <br />
-        <input
-          style={{ width: "50%", margin: "5px" }}
-          placeholder="Subject"
+        <Input
           type="text"
-          id="subject"
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          required
+          placeholder="Subject"
         />
-        <br />
-        <textarea
-          style={{ width: "50%", margin: "5px" }}
-          placeholder="Message"
-          id="message"
+        <TextArea
           name="message"
-          rows="4"
           value={formData.message}
           onChange={handleChange}
-          required
-        ></textarea>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
+          placeholder="Message"
+        />
+        <Button type="submit">Submit</Button>
+      </Form>
     </div>
   );
 };

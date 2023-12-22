@@ -18,17 +18,40 @@ const Text = styled.div`
     flex-wrap: nowrap;
     gap: 10em;
     border-radius: 0px 0px 0px 0px;
+    text-align: left;
 `;
 
 const About = () => {
     return (
-        <div>
-            <Text>
-                <h1>beep beep</h1>
-                <p>Jennifer Zhang likes to eat. </p>
-            </Text>
-        </div>
+      <div>
+        <Text>
+          <h1>About Me</h1>
+          <p>
+            Jennifer Zhang is a senior majoring in Information Systems at
+            Carnegie Mellon University. She has minors in Media Design and
+            Human-Computer Interaction.{" "}
+          </p>
+        </Text>
+        <Text>
+          <h1>Education</h1>
+          <p>
+            <b>Carnegie Mellon University</b>
+            <br />
+            2020 - 2024
+            <br />
+            Bachelor's Degree in Information Systems
+            <br />
+            Minors in Media Design and Human-Computer Interaction
+          </p>
+        </Text>
+        <Text>
+          <h1 align="left">Experience</h1>
+          <p>
+            
+          </p>
+        </Text>
+      </div>
     );
 };
- 
+
 export default About;
