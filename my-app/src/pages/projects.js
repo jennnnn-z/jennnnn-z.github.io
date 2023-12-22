@@ -1,16 +1,21 @@
 import React, { useEffect, useState }  from "react";
 import '../styles.scss';
-import { projects } from './projectsArray'
 import FilterButton from '../components/FilterButton';
 import ProjectList from '../components/ProjectList';
-// import images from '../images';
 
 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
 
   const filterSelection = (category) => {
-    setFilter(category);
+    if (category === "all") {
+      setFilter("all");
+    }
+    else if (category !== "code" && category !== "uiux") {
+      setFilter("other");
+    } else {
+      setFilter(category);
+    }
   };
 
   const categories = [
@@ -21,7 +26,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects">
+    <section id="projects" style={{ backgroundColor: "lightslategray" }}>
       <div className="container">
         <div className="project-wrapper">
           <h2 className="section-title dark-blue-text">Projects</h2>
@@ -34,16 +39,16 @@ const Projects = () => {
               gap: "1rem",
             }}
           >
-            {" "}
             {categories.map((category) => (
               <FilterButton
                 key={category}
                 category={category}
                 filterSelection={filterSelection}
+                currentFilter={filter}
               />
             ))}
           </div>
-          <ProjectList filter={filter} projects={projects} />
+          <ProjectList filter={filter} />
         </div>
       </div>
     </section>

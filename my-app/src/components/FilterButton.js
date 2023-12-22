@@ -1,6 +1,6 @@
-const FilterButton = ({ category, filterSelection }) => (
+const FilterButton = ({ category, filterSelection, currentFilter }) => (
   <button
-    className={`cta-btn cta-btn--hero hero-cta`}
+    className={`cta-btn cta-btn--hero hero-cta ${currentFilter === category ? 'active' : ''}`}
     type="button"
     onClick={() => filterSelection(category)}
   >

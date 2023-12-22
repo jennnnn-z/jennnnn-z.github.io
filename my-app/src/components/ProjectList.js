@@ -1,6 +1,7 @@
 import Project from "./Project";
+import { projects } from "../pages/projectsArray";
 
-const ProjectList = ({ filter, projects }) => {
+const ProjectList = ({ filter }) => {
   const filteredProjects =
     filter === "all"
       ? projects.filter((project) => project.active)
