@@ -33,7 +33,7 @@ font-weight: 700;
 font-style: normal;
 font-family: "Unbounded", sans-serif;
 color: var(--lighter_blue, #284b63);
-font-size: 99.45449836420218px;
+// font-size: 99.45449836420218px;
 letter-spacing: 0em;
 text-transform: uppercase;
 line-height: 1.1;
