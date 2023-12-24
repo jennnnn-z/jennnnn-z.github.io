@@ -50,7 +50,7 @@ const Header = () => {
     <Navbar>
         <TitleAndIcon />
       <div>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about">Resume</NavLink>
         <NavLink to="/projects">Projects</NavLink>
       </div>
     </Navbar>

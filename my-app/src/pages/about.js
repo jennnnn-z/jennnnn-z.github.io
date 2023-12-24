@@ -52,7 +52,8 @@ const About = () => {
             IT Customer Service Portfolio Intern
             <br />
             <i>May - August 2023</i>
-            <br /><br />
+            <br />
+            <br />
             <i>Pre-Sprint 0/Sprint 0 Tracker Template</i>
             <ul>
               <li>
@@ -90,8 +91,32 @@ const About = () => {
             <i>CSS Defects</i>
             <ul>
               <li>
-Remedied 8 CSS defects in a newly developed Mendix application, resulting in a more uniform, visually appealing, and
-                user-centric application interface. 
+                Remedied 8 CSS defects in a newly developed Mendix application,
+                resulting in a more uniform, visually appealing, and
+                user-centric application interface.
+              </li>
+            </ul>
+            <b>Erie Insurance</b> <br />
+            Asset Management Analyst / PM Intern
+            <br />
+            <i>May - August 2022</i>
+            <br />
+            <br />
+            <ul>
+              <li>
+                Developed a comprehensive CM practice guide for IT Service
+                Management, which enabled the team to establish and maintain an
+                effective and efficient configuration management process.
+              </li>
+              <li>
+                Managed ~350 Configuration Items (CIs) in the Configuration
+                Management Database (CMDB) by creating and updating them,
+                ensuring the CMDB's accuracy and relevance.
+              </li>
+              <li>
+                Compiled quarterly metrics to compare the CIs in the CMDB to
+                their source documents, identifying discrepancies and allowing
+                us to quickly address any issues.
               </li>
             </ul>
           </p>

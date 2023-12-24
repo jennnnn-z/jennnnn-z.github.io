@@ -1,3 +1,5 @@
+
+
 const Project = ({ project }) => {
   return (
     <div
@@ -10,7 +12,8 @@ const Project = ({ project }) => {
           backgroundColor: "#193b4d",
           borderRadius: "10px",
           padding: "20px",
-          boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+          boxShadow:
+            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}
       >
         <div className="col-lg-4 col-sm-12">
@@ -31,6 +34,7 @@ const Project = ({ project }) => {
             )}
           </div>
         </div>
+        {/* <div dangerouslySetInnerHTML={{ __html: project.embed }} /> */}
         <div className="col-lg-8 col-sm-12">
           <div className="project-wrapper__image load-hidden">
             {project.imageUrl && (
