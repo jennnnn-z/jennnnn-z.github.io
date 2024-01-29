@@ -1,13 +1,14 @@
 import mitigating from "../images/mitigating.jpg";
+import test from "../images/project.jpg"
 
 export const projects = [
   {
     title: "Flavor Saver",
     category: "code",
     active: true,
-    imageUrl: "../images/project.jpg",
+    imageUrl: test,
     description:
-      "Worked with a team of 2 to create an iOS app in Swift to save, organize, and cook recipes. I coded some of the front end screens. I also worked as the project manager to keep our team organized. ",
+      "• Developed a cooking application for iOS with two other CMU students. \n • Managed project timelines and tasks to ensure the team’s efficiency and success. \n • Developed robust front - end interfaces with Swift, focusing on functionality and user experience. ",    
     sourceCodeUrl: "https://github.com/jgao08/FlavorSaver",
   },
   {

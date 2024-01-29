@@ -2,38 +2,43 @@ import React from "react";
 import styled from 'styled-components';
 
 const Text = styled.section`
+  width: 100%;
     box-sizing: border-box;
     flex-shrink: 0;
     height: min-content; /* 350px */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
     align-items: left;
-    padding: 100px 100px 100px 100px;
+    padding: 10px 100px;
     background-color: #598392;
     overflow: hidden;
     flex: 1 0 0px;
     position: relative;
     align-content: left;
     flex-wrap: nowrap;
-    gap: 10em;
+    gap: 10px;
     border-radius: 0px 0px 0px 0px;
     text-align: left;
 `;
 
+const Wrapper = styled.div`
+;`
+
 const About = () => {
     return (
-      <div>
-        <Text>
-          <h1>About Me</h1>
+      <Wrapper>
+        <Text style={{ padding: "100px 100px 10px 100px" }}>
           <p>
-            Jennifer Zhang is a senior majoring in Information Systems at
+            <b>Jennifer Zhang</b> is a senior majoring in Information Systems at
             Carnegie Mellon University. She has minors in Media Design and
-            Human-Computer Interaction.{" "}
+            Human-Computer Interaction. She is passionate about creating random
+            and sometimes useful things.
           </p>
         </Text>
         <Text>
-          <h1 align="left">Education</h1>
+          <h1>Education</h1>
+          <hr />
           <p>
             <b>Carnegie Mellon University</b>
             <br />
@@ -44,8 +49,9 @@ const About = () => {
             Minors in Media Design and Human-Computer Interaction
           </p>
         </Text>
-        <Text>
-          <h1 align="left">Experience</h1>
+        <Text style={{ padding: "10px 100px 100px 100px" }}>
+          <h1 style={{ paddingBottom: "5px"}}>Experience</h1>
+          <hr />
           <p>
             <b>Erie Insurance</b>
             <br />
@@ -96,7 +102,7 @@ const About = () => {
                 user-centric application interface.
               </li>
             </ul>
-            <b>Erie Insurance</b> <br />
+            <br />
             Asset Management Analyst / PM Intern
             <br />
             <i>May - August 2022</i>
@@ -121,7 +127,7 @@ const About = () => {
             </ul>
           </p>
         </Text>
-      </div>
+      </Wrapper>
     );
 };
 

@@ -2,6 +2,8 @@ import React, { useEffect, useState }  from "react";
 import '../styles.scss';
 import FilterButton from '../components/FilterButton';
 import ProjectList from '../components/ProjectList';
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 
 const Projects = () => {
@@ -26,24 +28,15 @@ const Projects = () => {
   ];
 
   return (
-    <section
-      id="projects"
-      style={{ backgroundColor: "#1d4c64", color: "white" }}
-    >
-      <div className="container">
-        <div className="project-wrapper">
-          <h2 className="section-title" style={{ color: "#408abf" }}>
-            Projects
-          </h2>
-          <div
-            id="btn-container"
-            className="hero-cta load-hidden"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "1rem",
-            }}
-          >
+    <section id="projects" className="bg-secondary">
+      <Container>
+        <Row className="justify-content-center">
+          <Col md={8}>
+            <h2 className="section-title text-black">Projects</h2>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col md={8} className="d-flex justify-content-center gap-3">
             {categories.map((category) => (
               <FilterButton
                 key={category}
@@ -52,10 +45,13 @@ const Projects = () => {
                 currentFilter={filter}
               />
             ))}
-          </div>
+          </Col>
+        </Row>
+        <Row>
           <ProjectList filter={filter} />
-        </div>
-      </div>
+        </Row>
+        {/* Add more rows and columns as needed... */}
+      </Container>
     </section>
   );
 };
