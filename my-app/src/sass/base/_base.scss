@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: "Albert Sans", "Albert Sans Placeholder", sans-serif;
+  font-family: $font-family-base, sans-serif;
   text-align: center;
   scroll-behavior: smooth;
 }

@@ -6,7 +6,7 @@ const ProjectList = ({ filter }) => {
   return (
     <Row xs={1} md={2} lg={3} className="g-4">
       {projects
-        .filter((project) => (filter === "all" && project.active) || project.category === filter)
+        .filter((project) => (filter === "all" && project.active) || project.category.includes(filter))
         .map((project) => (
           <Project project={project}/>
         ))}
