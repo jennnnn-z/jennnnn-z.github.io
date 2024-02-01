@@ -5,21 +5,28 @@ import { TitleAndIcon } from "../components/titleAndIcon";
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="px-5 py-2">
+    <Navbar
+      bg="black"
+      variant="dark"
+      expand="lg"
+      className="justify-content-between px-5 py-2"
+    >
       <Navbar.Brand>
         <TitleAndIcon />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="">
-          <LinkContainer to="/about">
-            <Nav.Link>Resume</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/projects">
-            <Nav.Link>Projects</Nav.Link>
-          </LinkContainer>
-        </Nav>
-      </Navbar.Collapse>
+      <div>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <LinkContainer to="/about" className="ml-auto">
+              <Nav.Link>Resume</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/projects" className="ml-auto">
+              <Nav.Link>Projects</Nav.Link>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </div>
     </Navbar>
   );
 };
