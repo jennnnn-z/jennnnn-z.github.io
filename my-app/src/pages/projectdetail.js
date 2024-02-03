@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles.css';
 import { projects } from "../data/projectsArray";
 import { useParams } from "react-router-dom";
-import { Card, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 const Projectdetail = () => {
   const { projectTitle } = useParams();

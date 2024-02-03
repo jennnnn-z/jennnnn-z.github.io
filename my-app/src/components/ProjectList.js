@@ -1,6 +1,6 @@
 import Project from "./ProjectCard";
 import { projects } from "../data/projectsArray";
-import { Card, Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 const ProjectList = ({ filter }) => {
   return (

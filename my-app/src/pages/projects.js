@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from "react";
+import React, { useState }  from "react";
 import '../styles.scss';
 import FilterButton from '../components/FilterButton';
 import ProjectList from '../components/ProjectList';
