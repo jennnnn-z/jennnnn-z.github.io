@@ -28,11 +28,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-secondary">
-      <Container>
+    <section id="projects" className="bg-dark">
+      <Container className="p-5">
         <Row className="justify-content-center">
           <Col md={8}>
-            <h2 className="section-title text-black">Projects</h2>
+            <h2 className="section-title text-primary">Projects</h2>
           </Col>
         </Row>
         <Row className="justify-content-center">

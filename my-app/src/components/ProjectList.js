@@ -4,7 +4,7 @@ import { Card, Row, Col } from "react-bootstrap";
 
 const ProjectList = ({ filter }) => {
   return (
-    <Row xs={1} md={2} lg={3} className="g-4">
+    <Row xs={1} md={2} lg={2} className="g-4">
       {projects
         .filter((project) => (filter === "all" && project.active) || project.category.includes(filter))
         .map((project) => (

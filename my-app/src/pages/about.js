@@ -1,46 +1,25 @@
 import React from "react";
-import styled from 'styled-components';
-
-const Text = styled.section`
-  width: 100%;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    height: min-content; /* 350px */
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    padding: 10px 100px;
-    background-color: #598392;
-    overflow: hidden;
-    flex: 1 0 0px;
-    position: relative;
-    align-content: left;
-    flex-wrap: nowrap;
-    gap: 10px;
-    border-radius: 0px 0px 0px 0px;
-    text-align: left;
-`;
-
-const Wrapper = styled.div`
-;`
+import { Container, Row, Col } from "react-bootstrap";
 
 const About = () => {
-    return (
-      <Wrapper>
-        <Text style={{ padding: "100px 100px 10px 100px" }}>
+  return (
+    <Container fluid className="p-5 text-start bg-dark text-primary">
+      <Row className="m-5 bg-secondary rounded">
+        <Col className="p-5 " style={{ borderRadius: "0" }}>
           <p>
-            <b>Jennifer Zhang</b> is a senior majoring in Information Systems at
+            Jennifer Zhang is a senior majoring in Information Systems at
             Carnegie Mellon University. She has minors in Media Design and
             Human-Computer Interaction. She is passionate about creating random
             and sometimes useful things.
           </p>
-        </Text>
-        <Text>
+        </Col>
+      </Row>
+      <Row className="m-5 bg-secondary rounded">
+        <Col className="p-5" style={{ borderRadius: "0" }}>
           <h1>Education</h1>
           <hr />
           <p>
-            <b>Carnegie Mellon University</b>
+            <strong className="fs-4">Carnegie Mellon University</strong>
             <br />
             2020 - 2024
             <br />
@@ -48,22 +27,23 @@ const About = () => {
             <br />
             Minors in Media Design and Human-Computer Interaction
           </p>
-        </Text>
-        <Text style={{ padding: "10px 100px 100px 100px" }}>
-          <h1 style={{ paddingBottom: "5px"}}>Experience</h1>
+        </Col>
+      </Row>
+      <Row className="m-5 bg-secondary rounded">
+        <Col className="p-5 text-left" style={{ borderRadius: "0" }}>
+          <h1 style={{ paddingBottom: "5px" }}>Experience</h1>
           <hr />
           <p>
-            <b>Erie Insurance</b>
+            <strong className="fs-4">Erie Insurance</strong>
             <br />
             IT Customer Service Portfolio Intern
             <br />
             <i>May - August 2023</i>
             <br />
-            <br />
-            <i>Pre-Sprint 0/Sprint 0 Tracker Template</i>
+            {/* <i>Pre-Sprint 0/Sprint 0 Tracker Template</i> */}
             <ul>
               <li>
-                Enhanced the Sprint 0 tracker template, integrating 6 UX
+                Enhanced the Sprint 0 tracker template, integrating 6 UX 
                 improvements to better integrate the UX process in the existing
                 portfolio project lifecycle.
               </li>
@@ -72,18 +52,12 @@ const About = () => {
                 tracker using Miro, improving project coordination and alignment
                 among 8 teams.
               </li>
-            </ul>
-            <i>Porfolio RACI Document</i>
-            <ul>
               <li>
                 Collaborated with 15 leaders to refine roles and establish a
                 comprehensive RACI framework, promoting effective collaboration
                 and ensuring transparent accountability within cross-functional
                 teams.
               </li>
-            </ul>
-            <i>Clarity Roadmap Exploration</i>
-            <ul>
               <li>
                 Conducted an extensive exploration of Clarity's roadmap feature,
                 presenting comprehensive documentation of its advantages,
@@ -93,21 +67,17 @@ const About = () => {
                 Met with 4 teams to create a proof of concept of the roadmap
                 feature for the portfolio.
               </li>
-            </ul>
-            <i>CSS Defects</i>
-            <ul>
               <li>
                 Remedied 8 CSS defects in a newly developed Mendix application,
                 resulting in a more uniform, visually appealing, and
                 user-centric application interface.
               </li>
             </ul>
-            <br />
+          </p>
+          <p>
             Asset Management Analyst / PM Intern
             <br />
             <i>May - August 2022</i>
-            <br />
-            <br />
             <ul>
               <li>
                 Developed a comprehensive CM practice guide for IT Service
@@ -126,9 +96,10 @@ const About = () => {
               </li>
             </ul>
           </p>
-        </Text>
-      </Wrapper>
-    );
+        </Col>
+      </Row>
+    </Container>
+  );
 };
 
 export default About;

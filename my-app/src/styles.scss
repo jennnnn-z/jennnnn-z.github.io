@@ -1,20 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Honk:400");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Honk:MORF@25&display=swap');
 
 $dark: #193B4D;
-$light: #AEC3B0;
+$light: #598392;
 $secondary: #1c4b63;
 
-$primary: #408abf;
+$primary: #AEC3B0;
 $primary-light: #284b63;
 $primary-dark: #193B4D;
 
+$primary-color: $primary;
+$secondary-color: $secondary;
 
-$font-family-base: "Roboto Condensed";
+$font-family-base: "Fira Sans";
 $font-size-base: 1.6rem;
-
-$default-font-size: 1.6rem;
-$big-font-size: 4rem;
-$mid-font-size: 2.5rem;
 
 @import "./sass/vendors/bootstrap.scss";
 
@@ -54,3 +52,11 @@ $mid-font-size: 2.5rem;
   font-family: "Honk";
 }
 
+.custom-link {
+  color: $primary;
+
+  &:hover, &:active {
+    color: #EFF6E0;
+  }
+
+}
