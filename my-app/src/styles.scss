@@ -58,5 +58,48 @@ $font-size-base: 1.6rem;
   &:hover, &:active {
     color: #EFF6E0;
   }
-
 }
+
+.card:hover {
+  transform: scale(1.1);
+  transition: .2s;
+  z-index: 1;
+}
+
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+.custom-button {
+  background-color: transparent;
+  color: $primary;
+  &:hover {
+    background-color: $primary;
+    color: $black;
+    
+    .button-text {
+      padding-left: 1rem; // Slide text on hover
+    }
+  }
+
+  .button-text {
+    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+    // width: 100%;
+  }
+}
+
+// @supports (display: grid) {
+//   body {
+//     display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-gap: 0.625rem;
+//   grid-template-areas: ". main main ." ". main main .";
+//   }
+  
+//   #container {
+//     grid-area: main;
+//     align-self: center;
+//     justify-self: center;
+//   }
+// }

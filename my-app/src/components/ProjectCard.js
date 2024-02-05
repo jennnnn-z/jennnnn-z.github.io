@@ -1,7 +1,8 @@
 
 import React from 'react'
 import { Link } from "react-router-dom";
-import { Card, Col } from 'react-bootstrap'
+import { Card, Col } from 'react-bootstrap';
+import '../styles.scss';
 
 const ProjectCard = ({project}) => {
   return (

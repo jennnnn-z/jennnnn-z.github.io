@@ -19,10 +19,14 @@ const Header = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto fs-3">
           <LinkContainer to="/about">
-            <Nav.Link active={false} className="custom-link">Resume</Nav.Link>
+            <Nav.Link active={false} className="custom-link">
+              Resume
+            </Nav.Link>
           </LinkContainer>
           <LinkContainer to="/projects">
-            <Nav.Link active={false} className="custom-link">Projects</Nav.Link>
+            <Nav.Link active={false} className="custom-link">
+              Projects
+            </Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>

@@ -4,7 +4,6 @@ import mitigatingImg from "../images/mitigating.jpg";
 const mitigatingDetails = () => {
   return (
     <div className="my-5">
-
       <div className="mb-4">
         <h2>Project Overview</h2>
         <p>
@@ -79,4 +78,5 @@ export const mitigating = {
   embed: `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F4tKa0IRr4iJ6KdWhGRVSj4%2FconTROLLers-Prototype%3Ftype%3Ddesign%26node-id%3D44-3228%26t%3DQMQZL3149g1XWreD-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D44%253A3228%26show-proto-sidebar%3D1%26mode%3Ddesign" allowfullscreen></iframe>`,
   imageUrl: mitigatingImg,
   details: mitigatingDetails,
+  course: "05-320 Social Web",
 };

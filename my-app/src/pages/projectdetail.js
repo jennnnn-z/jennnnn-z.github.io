@@ -25,7 +25,7 @@ const Projectdetail = () => {
                 href={project.sourceCodeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-secondary p-3"
+                className="btn btn-secondary p-3 text-primary"
                 role="button"
               >
                 View Source Code

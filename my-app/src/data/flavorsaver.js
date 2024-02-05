@@ -64,14 +64,6 @@ const flavorSaverDetails = () => {
           audience.
         </p>
       </div>
-
-      <div className="mb-4">
-        <h2>Screenshots</h2>
-        <p>
-          Images and media related to the Flavor Saver app will be displayed
-          here.
-        </p>
-      </div>
     </div>
   );
 }
