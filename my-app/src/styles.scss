@@ -61,7 +61,8 @@ $font-size-base: 1.6rem;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  // transform: scale(1.1);
+  transform: translateY(-10px);
   transition: .2s;
   z-index: 1;
 }
@@ -71,35 +72,43 @@ $font-size-base: 1.6rem;
   transition: $property $duration $ease;
 }
 
+.button-text {
+  position: relative;
+  display: inline-block;
+  @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+  
+  &::before {
+    content: ''; // Initially, no content
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $black;
+    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+  }
+}
+
 .custom-button {
   background-color: transparent;
   color: $primary;
-  &:hover {
+  border: none;
+  padding: 0.5rem 1rem; // Adjust padding as needed
+  
+  &:hover, &:focus {
     background-color: $primary;
     color: $black;
     
     .button-text {
-      padding-left: 1rem; // Slide text on hover
+      
+      &::before {
+        content: '➔'; // Add the arrow on hover
+        position: static;
+        right: auto; 
+        left: auto;
+        margin-right: 10px;
+      }
     }
-  }
-
-  .button-text {
-    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
-    // width: 100%;
   }
 }
 
-// @supports (display: grid) {
-//   body {
-//     display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   grid-gap: 0.625rem;
-//   grid-template-areas: ". main main ." ". main main .";
-//   }
-  
-//   #container {
-//     grid-area: main;
-//     align-self: center;
-//     justify-self: center;
-//   }
-// }
+
+

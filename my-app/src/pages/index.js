@@ -30,24 +30,26 @@ const Home = () => {
           src="https://lottie.host/1d2ac87f-fa4a-4fd9-89b0-624da7c26017/7gDd1MBonF.lottie"
           autoplay
           loop
-          style={{ width: "100%", height: "100%"}}
+          style={{ width: "100%", height: "100%" }}
         />
       </div>
-      <h2 className="custom-name fs-2">Hello, I'm</h2>
-      <h1 className="fw-bold custom-name">Jennifer Zhang</h1>
-      <h3 className="custom-name fs-4">Check out my</h3>
-    <div className="mt-3 z-2">
-      <Link to="/about">
-        <Button variant="primary" className="custom-button m-2">
-          <span className="button-text">Resume</span>
-        </Button>
-      </Link>
-      <Link to="/projects">
-        <Button variant="primary" className="custom-button m-2">
-          <span className="button-text">Projects</span>
-        </Button>
-      </Link>
-    </div>
+      <div className="z-2">
+        <h2 className="custom-name fs-2">Hello, I'm</h2>
+        <h1 className="fw-bold custom-name">Jennifer Zhang</h1>
+        <h3 className="custom-name fs-4">Check out my</h3>
+        <div className="mt-3">
+          <Link to="/about">
+            <Button variant="primary" className="custom-button m-2">
+              <span className="button-text">Resume</span>
+            </Button>
+          </Link>
+          <Link to="/projects">
+            <Button variant="primary" className="custom-button m-2">
+              <span className="button-text">Projects</span>
+            </Button>
+          </Link>
+        </div>
+      </div>
     </Container>
   );
 };
