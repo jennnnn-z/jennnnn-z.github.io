@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d49e0fda.css",
+    "main.css": "/static/css/main.0f0701d0.css",
     "main.js": "/static/js/main.bc020841.js",
     "static/js/862.c977f0b3.chunk.js": "/static/js/862.c977f0b3.chunk.js",
     "static/js/160.2e98f92d.chunk.js": "/static/js/160.2e98f92d.chunk.js",
@@ -18,14 +18,14 @@
     "static/media/Flavor Saver Poster.png": "/static/media/Flavor Saver Poster.968b4a6153e426c5a5db.png",
     "static/media/mitigating.jpg": "/static/media/mitigating.f0b9719e74ac88f2829d.jpg",
     "index.html": "/index.html",
-    "main.d49e0fda.css.map": "/static/css/main.d49e0fda.css.map",
+    "main.0f0701d0.css.map": "/static/css/main.0f0701d0.css.map",
     "main.bc020841.js.map": "/static/js/main.bc020841.js.map",
     "374.ad8e95e8.chunk.js.map": "/static/js/374.ad8e95e8.chunk.js.map",
     "65.5a6b4814.chunk.js.map": "/static/js/65.5a6b4814.chunk.js.map",
     "787.c922dae8.chunk.js.map": "/static/js/787.c922dae8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d49e0fda.css",
+    "static/css/main.0f0701d0.css",
     "static/js/main.bc020841.js"
   ]
 }
