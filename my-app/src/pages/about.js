@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Container fluid className="p-5 text-start bg-dark text-primary">
-      <Row className="m-5 bg-secondary rounded">
+    <Container fluid className="p-5 text-start text-primary">
+      <Row className="m-5 border-0 rounded">
         <Col className="p-5 " style={{ borderRadius: "0" }}>
           <p>
             Jennifer Zhang is a senior majoring in Information Systems at

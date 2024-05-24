@@ -13,7 +13,7 @@ code {
 } */
 
 .home {
-  background-color: #284b63;
+  /* background-color: #ffffff; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,7 +21,7 @@ code {
 }
 
 .home .div-2 {
-  background-color: #284b63;
+  /* background-color: #284b63; */
   border: 1px none;
   height: 2205px;
   overflow: hidden;

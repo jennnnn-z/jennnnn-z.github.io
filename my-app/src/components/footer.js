@@ -5,7 +5,7 @@ import { FiLinkedin, FiMail, FiGithub } from "react-icons/fi";
 
 
 const FooterContainer = styled.footer`
-  color: white;
+  color: lightgray;
   box-sizing: border-box;
   width: 100%;
   height: min-content; /* 264px */
@@ -27,7 +27,7 @@ const SocialIcon = styled.a`
   display: flex;
   justify-content: center;
   gap: 20px;
-  color: white;
+  color: lightgray;
   font-size: 20px;
 `;
 

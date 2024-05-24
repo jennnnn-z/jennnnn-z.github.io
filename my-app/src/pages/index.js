@@ -3,12 +3,13 @@ import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 // import "./customStyles.css"; // For any custom styles not covered by Bootstrap
+import myGif from '../images/2024-05-24-jennifer-zhang.gif'
 
 const Home = () => {
   return (
     <Container
       fluid
-      className="d-flex flex-column justify-content-center align-items-center p-4 bg-dark text-center"
+      className="d-flex flex-column justify-content-center align-items-center p-4 text-center"
       style={{
         minHeight: "100vh",
         position: "relative",
@@ -26,16 +27,17 @@ const Home = () => {
           height: "100vw",
         }}
       >
-        <DotLottiePlayer
+        {/* <DotLottiePlayer
           src="https://lottie.host/1d2ac87f-fa4a-4fd9-89b0-624da7c26017/7gDd1MBonF.lottie"
           autoplay
           loop
           style={{ width: "100%", height: "100%" }}
-        />
+        /> */}
       </div>
       <div className="z-2">
         <h2 className="custom-name fs-2">Hello, I'm</h2>
-        <h1 className="fw-bold custom-name">Jennifer Zhang</h1>
+        <img src={myGif} alt="Jennifer Zhang" className="w-100"/>
+        {/* <h1 className="fw-bold custom-name">Jennifer Zhang</h1> */}
         <h3 className="custom-name fs-4">Check out my</h3>
         <div className="mt-3">
           <Link to="/about">
