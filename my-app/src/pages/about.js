@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Container fluid className="p-5 text-start text-primary">
-      <Row className="m-5 border-0 rounded">
+    <Container className="container-md text-start text-dark" >
+      <Row className="m-5 border border-dark rounded">
         <Col className="p-5 " style={{ borderRadius: "0" }}>
           <p>
             Jennifer Zhang is a senior majoring in Information Systems at
@@ -14,7 +14,7 @@ const About = () => {
           </p>
         </Col>
       </Row>
-      <Row className="m-5 bg-secondary rounded">
+      <Row className="m-5 border border-dark rounded">
         <Col className="p-5" style={{ borderRadius: "0" }}>
           <h1>Education</h1>
           <hr />
@@ -29,7 +29,7 @@ const About = () => {
           </p>
         </Col>
       </Row>
-      <Row className="m-5 bg-secondary rounded">
+      <Row className="m-5 border border-dark rounded">
         <Col className="p-5 text-left" style={{ borderRadius: "0" }}>
           <h1 style={{ paddingBottom: "5px" }}>Experience</h1>
           <hr />
@@ -43,7 +43,7 @@ const About = () => {
             {/* <i>Pre-Sprint 0/Sprint 0 Tracker Template</i> */}
             <ul>
               <li>
-                Enhanced the Sprint 0 tracker template, integrating 6 UX 
+                Enhanced the Sprint 0 tracker template, integrating 6 UX
                 improvements to better integrate the UX process in the existing
                 portfolio project lifecycle.
               </li>

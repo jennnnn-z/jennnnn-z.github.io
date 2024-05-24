@@ -28,13 +28,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-dark">
-      <Container className="p-5">
-        <Row className="justify-content-center">
-          <Col md={8}>
-            <h2 className="section-title text-primary">Projects</h2>
-          </Col>
-        </Row>
+    <section id="projects">
+      <Container className="container-md text-start text-dark">
         <Row className="justify-content-center">
           <Col md={8} className="d-flex justify-content-center gap-3">
             {categories.map((category) => (
