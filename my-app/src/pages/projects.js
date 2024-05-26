@@ -29,9 +29,9 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <Container className="container-md text-start text-dark">
+      <Container className="container-md text-start text-dark min-vh-100">
         <Row className="justify-content-center">
-          <Col md={8} className="d-flex justify-content-center gap-3">
+          <Col md={8} sm={4} className="d-flex justify-content-center gap-0">
             {categories.map((category) => (
               <FilterButton
                 key={category}

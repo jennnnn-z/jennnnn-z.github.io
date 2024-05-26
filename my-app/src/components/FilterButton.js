@@ -1,11 +1,11 @@
 const FilterButton = ({ category, filterSelection, currentFilter }) => (
-  <button
-    className={`cta-btn cta-btn--hero hero-cta ${currentFilter === category ? 'active' : ''}`}
+  <div
+    className={`filter-button ${currentFilter === category ? 'active' : ''} gap-1`}
     type="button"
     onClick={() => filterSelection(category)}
   >
     {category}
-  </button>
+  </div>
 );
 
 export default FilterButton;

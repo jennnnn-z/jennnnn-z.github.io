@@ -57,7 +57,7 @@ $font-size-base: 1.6rem;
   color: $primary;
 
   &:hover, &:active {
-    color: #EFF6E0;
+    color: $dark;
   }
 }
 
@@ -74,8 +74,8 @@ $font-size-base: 1.6rem;
 }
 
 .button-text {
-  position: relative;
-  display: inline-block;
+  // position: relative;
+  // display: inline-block;
   @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
   
   &::before {
@@ -89,27 +89,75 @@ $font-size-base: 1.6rem;
 }
 
 .custom-button {
+  --color-primary: #193B4D;
+  --color-secondary: #3C5C6E;
+  --color-tertiary: #5F7D8F;
+  --color-quaternary: #819FB0;
+  --color-quinary: #A4C1D1;
   background-color: transparent;
-  color: $primary;
+  color: $primary-dark;
   border: none;
   padding: 0.5rem 1rem; // Adjust padding as needed
   
   &:hover, &:focus {
-    background-color: $primary;
+    background-color: $white-color;
     color: $black;
     
-    .button-text {
+  //   // .button-text {
       
-      &::before {
-        content: '➔'; // Add the arrow on hover
-        position: static;
-        right: auto; 
-        left: auto;
-        margin-right: 10px;
-      }
-    }
+  //   //   &::before {
+  //   //     content: '➔'; // Add the arrow on hover
+  //   //     position: static;
+  //   //     right: auto; 
+  //   //     left: auto;
+  //   //     margin-right: 10px;
+  //   //   }
+  //   // }
   }
 }
 
+.custom-button:hover .button-text {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in 1, move 1.2s ease-in 1;
+  letter-spacing: 0.4rem;
+}
 
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40%, 100% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(12px, 12px);
+  }
+  40%, 100% {
+    transform: translate(0px, 0px);
+  }
+}
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { DotLottiePlayer } from "@dotlottie/react-player";
 // import "./customStyles.css"; // For any custom styles not covered by Bootstrap
 import myGif from '../images/2024-05-24-jennifer-zhang.gif'
 
@@ -41,13 +40,13 @@ const Home = () => {
         <h3 className="custom-name fs-4">Check out my</h3>
         <div className="mt-3">
           <Link to="/about">
-            <Button variant="primary" className="custom-button m-2">
-              <span className="button-text">Resume</span>
+            <Button className="custom-button m-2">
+              <span className="button-text text-uppercase">Resume</span>
             </Button>
           </Link>
           <Link to="/projects">
             <Button variant="primary" className="custom-button m-2">
-              <span className="button-text">Projects</span>
+              <span className="button-text text-uppercase">Projects</span>
             </Button>
           </Link>
         </div>

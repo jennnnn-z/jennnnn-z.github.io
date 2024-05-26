@@ -12,7 +12,7 @@ const ProjectCard = ({project}) => {
         className={`filterDiv ${project.category}`}
         style={{ color: "#408abf" }}
       >
-        <Card className="bg-secondary text-primary shadow p-3">
+        <Card className="bg-white text-dark border border-dark p-3">
           <Card.Img variant="top" src={project.image} />
           <Card.Body className="text-start">
             <Card.Title className="text-center fs-2 fw-bold">
@@ -20,7 +20,7 @@ const ProjectCard = ({project}) => {
             </Card.Title>
             <Card.Text className="text-start">{project.description}</Card.Text>
             {project.category.map((category, index) => (
-              <span key={index} className="badge bg-primary p-2 m-1 text-bg-light">
+              <span key={index} className="badge bg-secondary p-2 m-1 text-white">
                 {category}
               </span>
             ))}

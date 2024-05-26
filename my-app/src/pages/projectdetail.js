@@ -13,11 +13,11 @@ const Projectdetail = () => {
   }
 
   return (
-    <section className="bg-dark">
-      <div className="project-container text-primary">
+    <section className="bg-white">
+      <div className="project-container text-dark">
         <Row className="align-items-center">
           <Col>
-            <h2 className="fs-1 text-primary fw-bold">{project.title}</h2>
+            <h2 className="fs-1 text-dark fw-bold">{project.title}</h2>
           </Col>
           {project.sourceCodeUrl && (
             <Col className="text-end">
@@ -25,7 +25,7 @@ const Projectdetail = () => {
                 href={project.sourceCodeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-secondary p-3 text-primary"
+                className="btn btn-primary  p-3 text-dark"
                 role="button"
               >
                 View Source Code
@@ -41,9 +41,9 @@ const Projectdetail = () => {
             className="rounded-lg my-3"
           />
         ) : null}{" "}
-        <p className="px-5 py-5 bg-secondary rounded">{project.description}</p>
+        <p className="px-5 py-5 bg-white rounded">{project.description}</p>
         {project.details ? (
-          <div className="my-3 px-5 py-1 bg-secondary rounded">
+          <div className="my-3 px-5 py-1 bg-white border border-dark rounded">
             {project.details()}
           </div>
         ) : (
