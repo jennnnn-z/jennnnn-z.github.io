@@ -1,5 +1,5 @@
 import React from "react";
-import flavorSaverImg1 from "../images/flavorsaver.mp4";
+// import flavorSaverImg1 from "../images/flavorsaver.mp4";
 import flavorSaverImg2 from "../images/Flavor Saver Poster.png";
 
 const flavorSaverDetails = () => {

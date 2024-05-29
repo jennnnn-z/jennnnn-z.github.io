@@ -3,20 +3,22 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Container className="container-md text-start text-dark" >
+    <Container className="container-md text-start text-dark">
       <Row className="m-5 border border-dark rounded">
         <Col className="p-5 " style={{ borderRadius: "0" }}>
           <p>
-            Jennifer Zhang is a senior majoring in Information Systems at
-            Carnegie Mellon University. She has minors in Media Design and
-            Human-Computer Interaction. She is passionate about creating random
-            and sometimes useful things.
+            Jennifer Zhang is a recent graduate with a major in Information
+            Systems at Carnegie Mellon University. She has minors in Media
+            Design and Human-Computer Interaction. She is passionate about
+            creating random and sometimes useful things (for example: sewing
+            puffy flowers with sensors as an art installation, crocheting so
+            many animals, etc. )
           </p>
         </Col>
       </Row>
       <Row className="m-5 border border-dark rounded">
         <Col className="p-5" style={{ borderRadius: "0" }}>
-          <h1>Education</h1>
+          <h1 className="fs-2">Education</h1>
           <hr />
           <p>
             <strong className="fs-4">Carnegie Mellon University</strong>
@@ -27,13 +29,22 @@ const About = () => {
             <br />
             Minors in Media Design and Human-Computer Interaction
           </p>
+          <p>
+            <strong className="fs-4">Fudan University</strong>
+            <br />
+            Feb - Jun 2024
+            <br />
+            Study Abroad
+          </p>
         </Col>
       </Row>
       <Row className="m-5 border border-dark rounded">
         <Col className="p-5 text-left" style={{ borderRadius: "0" }}>
-          <h1 style={{ paddingBottom: "5px" }}>Experience</h1>
+          <h1 className="fs-2" style={{ paddingBottom: "5px" }}>
+            Experience
+          </h1>
           <hr />
-          <p>
+          {/* <p> */}
             <strong className="fs-4">Erie Insurance</strong>
             <br />
             IT Customer Service Portfolio Intern
@@ -73,8 +84,8 @@ const About = () => {
                 user-centric application interface.
               </li>
             </ul>
-          </p>
-          <p>
+          {/* </p> */}
+          {/* <p> */}
             Asset Management Analyst / PM Intern
             <br />
             <i>May - August 2022</i>
@@ -95,7 +106,7 @@ const About = () => {
                 us to quickly address any issues.
               </li>
             </ul>
-          </p>
+          {/* </p> */}
         </Col>
       </Row>
     </Container>

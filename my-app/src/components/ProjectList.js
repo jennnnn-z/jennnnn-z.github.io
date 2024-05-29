@@ -1,16 +1,22 @@
 import Project from "./ProjectCard";
 import { projects } from "../data/projectsArray";
-import { Row } from "react-bootstrap";
+// import { Col } from "react-bootstrap";
 
 const ProjectList = ({ filter }) => {
   return (
-    <Row xs={1} md={2} lg={2} className="g-4">
+    // <Col xs={1} md={2} lg={12} className="d-flex gap-4 p-4">
+    <div className="p-4 m-4">
       {projects
-        .filter((project) => (filter === "all" && project.active) || project.category.includes(filter))
+        .filter(
+          (project) =>
+            (filter === "all" && project.active) ||
+            project.category.includes(filter)
+        )
         .map((project) => (
-          <Project project={project}/>
+          <Project project={project} key={project.title} />
         ))}
-    </Row>
+    </div>
+    // </Col>
   );
 };
 

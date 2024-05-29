@@ -15,7 +15,7 @@ const Header = () => {
         <Navbar.Brand>
           <TitleAndIcon />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-navbar-toggle">
           <img src={hamburger} alt="hamburger" style={{width: "5vw", height: "auto"}} className="ml-0"/>
         </Navbar.Toggle>
 
@@ -33,7 +33,6 @@ const Header = () => {
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
-      {/* </div> */}
     </Navbar>
   );
 };

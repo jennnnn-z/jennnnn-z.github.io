@@ -64,10 +64,14 @@ $font-size-base: 1.6rem;
 .card:hover {
   // transform: scale(1.1);
   transform: translateY(-10px);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: .2s;
   z-index: 1;
 }
 
+.invert-colors {
+  filter: invert(1);
+}
 
 @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
   transition: $property $duration $ease;
@@ -161,3 +165,14 @@ $font-size-base: 1.6rem;
   }
 }
 
+body{
+  cursor: url("./images/2016-pop-cat-cursor.svg"), auto;
+
+  &:active {
+    cursor: url("./images/2016-pop-cat-pointer.svg"), auto;
+  }
+}
+
+a, button, input[type="submit"], .clickable, .clickable:hover, .filter-button:hover, .custom-navbar-toggle:hover, .custom-button:hover {
+  cursor: url("./images/2016-pop-cat-pointer.svg"), auto;
+}

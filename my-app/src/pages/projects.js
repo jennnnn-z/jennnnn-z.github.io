@@ -42,7 +42,7 @@ const Projects = () => {
             ))}
           </Col>
         </Row>
-        <Row>
+        <Row className="justify-content-center">
           <ProjectList filter={filter} />
         </Row>
         {/* Add more rows and columns as needed... */}
