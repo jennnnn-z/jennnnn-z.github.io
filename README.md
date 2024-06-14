@@ -2,7 +2,7 @@
 Welcome to my website where I showcase my projects and resume. 
 
 ## Features
----
+
 ### Home Page
 This page points users in the direction of my resume or projects or even my photography. 
 
