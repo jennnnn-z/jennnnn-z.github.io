@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=./index.html?pathname=%2Fyour-pathname%2F" />
+    <script>
+      // Ensure we can redirect back to the correct route after refresh
+      const pathname = window.location.pathname;
+      const search = window.location.search;
+      if (pathname !== '/' && !search.includes('pathname')) {
+        window.location.replace(`./index.html?pathname=${pathname}`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
