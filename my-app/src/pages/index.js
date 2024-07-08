@@ -3,6 +3,7 @@ import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import "./customStyles.css"; // For any custom styles not covered by Bootstrap
 import myGif from '../images/2024-05-24-jennifer-zhang.gif'
+import { FiCamera, FiArrowRight } from "react-icons/fi";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         zIndex: 1,
       }}
     >
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: "50%",
@@ -25,14 +26,14 @@ const Home = () => {
           width: "100vh",
           height: "100vw",
         }}
-      >
+      > */}
         {/* <DotLottiePlayer
           src="https://lottie.host/1d2ac87f-fa4a-4fd9-89b0-624da7c26017/7gDd1MBonF.lottie"
           autoplay
           loop
           style={{ width: "100%", height: "100%" }}
         /> */}
-      </div>
+      {/* </div> */}
       <div className="z-2">
         <h2 className="custom-name fs-2">Hello, I'm</h2>
         <img src={myGif} alt="Jennifer Zhang" className="w-100"/>
@@ -49,6 +50,13 @@ const Home = () => {
               <span className="button-text text-uppercase">Projects</span>
             </Button>
           </Link>
+        </div>
+        <div className="pt-5 ml-5">
+          I also occasionally take pictures
+          <FiArrowRight className="px-1"/>
+          <a href="https://www.behance.net/jenniferzhang20" target="_blank" rel="noreferrer">
+            <FiCamera />
+          </a>
         </div>
       </div>
     </Container>

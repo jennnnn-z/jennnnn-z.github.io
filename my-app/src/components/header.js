@@ -7,8 +7,8 @@ import hamburger  from "../images/hamburger-icon.png";
 const Header = () => {
   return (
     <Navbar
-      bg="white"
-      expand="lg"
+      bg="none"
+      // expand="lg"
       className="justify-content-between px-5 py-2 text-primary"
     >
 
