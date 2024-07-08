@@ -3,7 +3,7 @@ import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import "./customStyles.css"; // For any custom styles not covered by Bootstrap
 import myGif from '../images/2024-05-24-jennifer-zhang.gif'
-import { FiCamera, FiArrowRight } from "react-icons/fi";
+import { FiCamera, FiArrowRight,FiMoon } from "react-icons/fi";
 
 const Home = () => {
   return (
@@ -52,10 +52,17 @@ const Home = () => {
           </Link>
         </div>
         <div className="pt-5 ml-5">
+          My art is also on the moon! 
+          <FiArrowRight className="px-1" />
+          <a href="https://lun.art/" target="_blank" rel="noreferrer">
+            <FiMoon size={"2em"}/>
+            </a>
+        </div>
+        <div className="pt-5 ml-5">
           I also occasionally take pictures
           <FiArrowRight className="px-1"/>
           <a href="https://www.behance.net/jenniferzhang20" target="_blank" rel="noreferrer">
-            <FiCamera />
+            <FiCamera size={"2em"}/>
           </a>
         </div>
       </div>

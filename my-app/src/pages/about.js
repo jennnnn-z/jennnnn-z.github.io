@@ -47,7 +47,7 @@ const About = () => {
           {/* <p> */}
             <strong className="fs-4">Erie Insurance</strong>
             <br />
-            IT Customer Service Portfolio Intern
+            Project Management/UX Intern
             <br />
             <i>May - August 2023</i>
             <br />
