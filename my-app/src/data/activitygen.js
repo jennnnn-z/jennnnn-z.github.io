@@ -79,6 +79,8 @@ export const activitygen = {
   category: ["code"],
   active: true,
   course: "67-328 Full Stack Application and Development",
-  description: "The \"Activity Generator\" is a web app I developed to suggest personalized activities to users based on their preferences. Using HTML, CSS, JavaScript, and jQuery, I built this full-stack project in 5 months, enhancing my skills in web development.",
+  description:
+    'The "Activity Generator" is a web app I developed to suggest personalized activities to users based on their preferences. Using HTML, CSS, JavaScript, and jQuery, I built this full-stack project in 5 months, enhancing my skills in web development.',
   details: activitygenDetails,
+  sourceCodeUrl: "https://main--phenomenal-meerkat-481ce0.netlify.app/",
 };
