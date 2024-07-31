@@ -8,8 +8,8 @@ const Header = () => {
   return (
     <Navbar
       bg="none"
-      // expand="lg"
-      className="justify-content-between px-5 py-2 text-primary"
+      expand="md"
+      className="justify-content-between px-5 py-2 text-primary bg-transparent"
     >
 
         <Navbar.Brand>

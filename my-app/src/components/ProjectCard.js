@@ -6,7 +6,7 @@ import '../styles.scss';
 
 const ProjectCard = ({project}) => {
     const [isHovered, setIsHovered] = useState(false);
-return (
+  return (
   <Row key={project.title} className="p-4">
     <Link
       to={`/projects/${project.title}`}
@@ -23,7 +23,12 @@ return (
         {" "}
         {/* <Card.Img variant="top" src={project.image} /> */}
         <Card.Body className="text-start d-flex gap-4">
-          <Card.Title xs={12} md={4} lg={4} className="text-start fs-4">
+          <Card.Title
+            xs={12}
+            md={4}
+            lg={4}
+            className="text-start fs-4 min-width-med-25rem min-width-lg-25rem"
+          >
             {project.title}
           </Card.Title>
           <div
@@ -35,7 +40,7 @@ return (
             }}
             lg={4}
           >
-            <Card.Text lg={4} className="text-start">
+            <Card.Text lg={4} className="text-start min-width-lg-62rem">
               {project.description}
             </Card.Text>
             <div className="text-end">

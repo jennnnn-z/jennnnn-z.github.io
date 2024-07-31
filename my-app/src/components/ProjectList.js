@@ -1,38 +1,39 @@
 import Project from "./ProjectCard";
 import { projects } from "../data/projectsArray";
-// import { Col } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 const ProjectList = ({ filter }) => {
   return (
-    // <Col xs={1} md={2} lg={12} className="d-flex gap-4 p-4">
-    <div className="p-4 m-4">
+    <motion.div
+      className="p-4 m-4"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        visible: {
+          transition: {
+            staggerChildren: 0.2,
+          },
+        },
+      }}
+    >
       {projects
         .filter(
           (project) =>
             (filter === "all" && project.active) ||
             project.category.includes(filter)
         )
-        .map((project) => (
-          <Project project={project} key={project.title} />
+        .map((project, index) => (
+          <motion.div
+            key={project.title}
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
+          >
+            <Project project={project} />
+          </motion.div>
         ))}
-    </div>
-    // </Col>
+    </motion.div>
   );
 };
-
-// const ProjectList = ({ filter }) => {
-//   const filteredProjects =
-//     filter === "all"
-//       ? projects.filter((project) => project.active)
-//       : projects.filter((project) => project.category.includes(filter) && project.active);
-
-//   return (
-//     <section id="projects">
-//           {filteredProjects.map((project, index) => (
-//             <Project key={index} project={project} />
-//           ))}
-//         </section>
-//   );
-// };
 
 export default ProjectList;

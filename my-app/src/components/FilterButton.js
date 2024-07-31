@@ -1,11 +1,16 @@
+import { motion } from 'framer-motion';
+
 const FilterButton = ({ category, filterSelection, currentFilter }) => (
-  <div
-    className={`filter-button ${currentFilter === category ? 'active' : ''} gap-1`}
+  <motion.div
+    className={`filter-button ${
+      currentFilter === category ? "active" : ""
+    } gap-1`}
     type="button"
     onClick={() => filterSelection(category)}
+    transition={{ duration: 5, ease: "easeInOut" }}
   >
     {category}
-  </div>
+  </motion.div>
 );
 
 export default FilterButton;
