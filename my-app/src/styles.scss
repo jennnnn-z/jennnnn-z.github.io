@@ -44,10 +44,10 @@ $font-size-base: 1.6rem;
   visibility: visible;
 }
 
-// .custom-name {
-//   color: $primary-light;
-//   font-family: "Comic Sans";
-// }
+.custom-name {
+  color: $primary-light;
+  font-family: "Comic Sans";
+}
 
 .logo {
   text-transform: uppercase;
@@ -95,14 +95,14 @@ $font-size-base: 1.6rem;
   text-decoration: underline;
   font-weight: bold;
 
-  &::before {
-    content: ""; // Initially, no content
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: $black;
-    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-  }
+  // &::before {
+  //   content: ""; // Initially, no content
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  //   color: $black;
+  //   @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+  // }
 }
 
 .custom-button {
@@ -113,8 +113,8 @@ $font-size-base: 1.6rem;
   --color-quinary: #a4c1d1;
   background-color: transparent;
   color: $primary-light;
-
-  border: none;
+  font-weight: bold;
+  border: 1px solid $primary-light;
   padding: 0.5rem 1rem;
 
   &:hover,
@@ -127,8 +127,9 @@ $font-size-base: 1.6rem;
 .custom-button:hover .button-text {
   text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
     6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
-  font-family: bungee, sans-serif;
+  // font-family: 'zen tokyo zoo', sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
   // font-size: calc(2rem + 5vw);
   text-align: center;
   margin: 0;
@@ -217,35 +218,53 @@ input[type="submit"],
     $primary 100%
   );
   mix-blend-mode: color-dodge;
-  -webkit-animation: move 25s infinite alternate;
   animation: move 25s infinite alternate;
-  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
   filter: blur(10px);
 }
 
-@-webkit-keyframes move {
-  from {
-    transform: translate(-200px, -150px) rotate(-120deg);
-    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
-  }
-
-  to {
-    transform: translate(500px, 100px) rotate(-10deg);
-    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
-  }
-}
-
 @keyframes move {
-  from {
-    transform: translate(-200px, -150px) rotate(-120deg);
-    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  0% {
+    transform: rotate(-120deg);
+    border-radius: 30% 70% 40% 60% / 35% 45% 55% 65%;
   }
-
-  to {
-    transform: translate(500px, 100px) rotate(-10deg);
-    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  25% {
+    border-radius: 55% 45% 35% 65% / 40% 60% 50% 70%;
+  }
+  50% {
+    transform: rotate(120deg);
+    border-radius: 65% 35% 50% 50% / 55% 45% 60% 40%;
+  }
+  75% {
+    border-radius: 45% 55% 60% 40% / 65% 35% 70% 30%;
+  }
+  100% {
+    border-radius: 70% 30% 45% 55% / 75% 25% 50% 50%;
   }
 }
+
+// @-webkit-keyframes move {
+//   from {
+//     transform: translate(-200px, -150px) rotate(-120deg);
+//     border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+//   }
+
+//   to {
+//     transform: translate(500px, 100px) rotate(-10deg);
+//     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+//   }
+// }
+
+// @keyframes move {
+//   from {
+//     transform: translate(-200px, -150px) rotate(-120deg);
+//     border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+//   }
+
+//   to {
+//     transform: translate(500px, 100px) rotate(-10deg);
+//     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+//   }
+// }
 
 .underline{
   border-bottom: 1px solid $dark;

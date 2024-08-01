@@ -2,66 +2,25 @@ import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import "./customStyles.css"; // For any custom styles not covered by Bootstrap
-import myGif from "../images/2024-05-24-jennifer-zhang.gif";
-import { FiCamera, FiArrowRight, FiMoon } from "react-icons/fi";
+// import myGif from "../images/2024-05-24-jennifer-zhang.gif";
+import Blob from '../components/Blob';
+import {
+  FiCamera,
+  FiArrowRight,
+  FiMoon,
+  FiCornerLeftDown,
+  FiCornerRightDown,
+} from "react-icons/fi";
+import { motion } from 'framer-motion'; 
+
+const name = "jennifer zhang";
+
+const letterVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const Home = () => {
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  function generateRandomKeyframes() {
-    const fromTransform = `translate(${getRandomInt(
-      -200,
-      200
-    )}px, ${getRandomInt(-200, 200)}px) rotate(${getRandomInt(-180, 180)}deg)`;
-    const toTransform = `translate(${getRandomInt(-200, 200)}px, ${getRandomInt(
-      -200,
-      200
-    )}px) rotate(${getRandomInt(-180, 180)}deg)`;
-
-    const fromBorderRadius = `${getRandomInt(20, 80)}% ${getRandomInt(
-      20,
-      80
-    )}% ${getRandomInt(20, 80)}% ${getRandomInt(20, 80)}% / ${getRandomInt(
-      20,
-      80
-    )}% ${getRandomInt(20, 80)}% ${getRandomInt(20, 80)}% ${getRandomInt(
-      20,
-      80
-    )}%`;
-    const toBorderRadius = `${getRandomInt(20, 80)}% ${getRandomInt(
-      20,
-      80
-    )}% ${getRandomInt(20, 80)}% ${getRandomInt(20, 80)}% / ${getRandomInt(
-      20,
-      80
-    )}% ${getRandomInt(20, 80)}% ${getRandomInt(20, 80)}% ${getRandomInt(
-      20,
-      80
-    )}%`;
-
-    return `
-    @keyframes move {
-      from {
-        transform: ${fromTransform};
-        border-radius: ${fromBorderRadius};
-      }
-      to {
-        transform: ${toTransform};
-        border-radius: ${toBorderRadius};
-      }
-    }
-  `;
-  }
-
-  function injectKeyframes() {
-    const style = document.createElement("style");
-    style.innerHTML = generateRandomKeyframes();
-    document.head.appendChild(style);
-  }
-
-  injectKeyframes();
   return (
     <Container
       fluid
@@ -73,11 +32,36 @@ const Home = () => {
         zIndex: 1,
       }}
     >
-      <div className="home-container z-2">
+      <motion.div
+        className="home-container z-2"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1, ease: "circOut" }}
+      >
         <h2 className="custom-name fs-2">Hello, I'm</h2>
-        <img src={myGif} alt="Jennifer Zhang" className="w-100" />
-        {/* <h1 className="fw-bold custom-name">Jennifer Zhang</h1> */}
-        <h3 className="custom-name fs-4">Check out my</h3>
+        <motion.h2
+          className="custom-name fs-1"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
+          {name.split("").map((letter, index) => (
+            <motion.span key={index} variants={ letterVariants }>
+              {letter}
+            </motion.span>
+          ))}
+        </motion.h2>
+        <div className="d-flex flex-row justify-content-center">
+          <FiCornerLeftDown size={"2em"}/>
+          <h3 className="custom-name fs-4">Check out my</h3>
+          <FiCornerRightDown size={"2em"}/>
+        </div>
         <div className="mt-3">
           <Link to="/about">
             <Button className="custom-button m-2 btn_nav">
@@ -108,8 +92,8 @@ const Home = () => {
             <FiCamera size={"2em"} className="underline text-dark" />
           </a>
         </div>
-      </div>
-      <div className="blob" />
+      </motion.div>
+      <Blob />
     </Container>
   );
 };
