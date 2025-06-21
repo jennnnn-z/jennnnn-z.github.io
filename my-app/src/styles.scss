@@ -191,7 +191,7 @@ input[type="submit"],
 }
 
 .home-container {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(18px) hue-rotate(90deg);
   -webkit-backdrop-filter: blur(18px) hue-rotate(90deg);
@@ -202,24 +202,52 @@ input[type="submit"],
   /* background-color: whitesmoke; */
 }
 
-/* .main-container {
-  background-color: white;
-} */
+.main-container {
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, $primary 2px, transparent 1px),
+    linear-gradient(to bottom, $primary 2px, transparent 1px);
+  z-index: 1;
+  // mask: url(#blob-mask);
+  // -webkit-mask: url(#blob-mask);
+  // /* Invert the mask */
+  // mask-composite: exclude;
+  // -webkit-mask-composite: xor;
+}
 
 .blob {
   z-index: 1;
-  position: absolute;
-  width: 50%;
-  min-width: 300px;
-  height: 50%;
-  background: linear-gradient(
-    180deg,
-    rgba(47, 184, 255, 0.42) 31.77%,
-    $primary 100%
-  );
-  mix-blend-mode: color-dodge;
-  animation: move 25s infinite alternate;
-  filter: blur(10px);
+  width: 100px;
+  height: 100px;
+  background: red;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(47, 184, 255, 0.42) 31.77%,
+  //   $primary 100%
+  // );
+  // mix-blend-mode: color-dodge;
+  // animation: move 25s infinite alternate;
+  filter: blur(1px);
+}
+
+/* Warped grid - only visible through the blob mask, layered on top */
+.grid-warped {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 0, 255, 0.8) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 255, 0.8) 1px, transparent 1px);
+    background-size: 48px 48px;
+    filter: url(#localized-warp);
+    mask: url(#blob-mask);
+    -webkit-mask: url(#blob-mask);
+    z-index: 2;
 }
 
 @keyframes move {

@@ -68,7 +68,34 @@ const About = () => {
               Experience
             </h1>
             <hr />
-            {/* <p> */}
+              {/* <p> */}
+              <strong className="fs-4">ASML</strong>
+              <br />
+              Data Scientist
+              <br />
+              <i>Oct 2024 - Present</i>
+              <br />
+              <ul>
+                <li>Process and clean large datasets using Python (pandas, numpy) to prepare data for analysis and visualization</li>
+                <li>Create dynamic dashboards and reports using Power BI to provide stakeholders with actionable data insights and trends</li>
+                <li>Developing a data pipeline using Databricks that transforms raw data into multiple dashboard inputs, improving data processing efficiency for team-driven decision-making</li>
+                <li>Enhance application functionality through front-end and back-end development, implementing new features to improve overall system capabilities</li>
+                <li>Collaborate with team members to document Python application development and usage processes, creating standardized procedures for knowledge transfer</li>
+                <li>Currently developing a machine learning model to predict machine failures and categorize failure types</li>
+              </ul>
+            <strong className="fs-4">Avansight</strong>
+              <br />
+              Frontend Developer 
+              <br />
+              <i>Aug 2024 - Oct 2024</i>
+              <br />
+              <ul>
+                <li>Developed and maintained dynamic data tables and summary panels with advanced features including template import/export, filter handling, and conditional formatting</li>
+                <li>Collaborated with backend and frontend teams to integrate and troubleshoot API calls, ensuring seamless data transfer between systems</li>
+                <li>Implemented new UI features including collapsible navigation, responsive layouts, and customizable table properties to enhance user experience</li>
+                <li>Utilized Docker and Azure for application deployment and management, troubleshooting environment-specific issues and integrating third-party services</li>
+              </ul>
+
             <strong className="fs-4">Erie Insurance</strong>
             <br />
             Project Management/UX Intern

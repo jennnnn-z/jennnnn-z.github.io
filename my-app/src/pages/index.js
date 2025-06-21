@@ -32,8 +32,9 @@ const Home = () => {
         zIndex: 1,
       }}
     >
+      <Blob />
       <motion.div
-        className="home-container z-2"
+        className="home-container z-5"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1, ease: "circOut" }}

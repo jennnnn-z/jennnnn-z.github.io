@@ -10,6 +10,7 @@ const Header = () => {
       bg="none"
       expand="md"
       className="justify-content-between px-5 py-2 text-primary bg-transparent"
+      style={{zIndex: 5}}
     >
 
         <Navbar.Brand>

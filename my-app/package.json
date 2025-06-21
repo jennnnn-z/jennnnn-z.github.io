@@ -23,7 +23,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "add-domain": "echo 'j.zip' > build/CNAME",
+    "add-domain": "echo 'silly.j.zip' > build/CNAME",
     "deploy": "npm run add-domain && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
